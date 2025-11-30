@@ -1,0 +1,85 @@
+{
+    "name": "vscode-panel-width",
+    "displayName": "VSCode Panel Width",
+    "description": "An extension to set minimum widths for sidebars and the bottom panel via CSS injection.",
+    "version": "0.2.0",
+    "publisher": "your-name",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vscode-panel-width.applyAll",
+                "title": "Panel Width: Apply All Sizes"
+            },
+            {
+                "command": "vscode-panel-width.applyPrimarySidebar",
+                "title": "Panel Width: Apply Primary Sidebar Size"
+            },
+            {
+                "command": "vscode-panel-width.applySecondarySidebar",
+                "title": "Panel Width: Apply Secondary Sidebar Size"
+            },
+            {
+                "command": "vscode-panel-width.applyPanelSize",
+                "title": "Panel Width: Apply Panel Size"
+            },
+            {
+                "command": "vscode-panel-width.setPrimarySidebarSize",
+                "title": "Panel Width: Set Primary Sidebar Size"
+            },
+            {
+                "command": "vscode-panel-width.setSecondarySidebarSize",
+                "title": "Panel Width: Set Secondary Sidebar Size"
+            },
+            {
+                "command": "vscode-panel-width.setPanelSize",
+                "title": "Panel Width: Set Panel Size"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Panel Width Configuration",
+            "properties": {
+                "panelWidth.primarySidebar": {
+                    "type": "number",
+                    "default": 5,
+                    "minimum": 1,
+                    "description": "Size of the primary sidebar (left). 1 = minimum, each increment adds one step."
+                },
+                "panelWidth.secondarySidebar": {
+                    "type": "number",
+                    "default": 8,
+                    "minimum": 1,
+                    "description": "Size of the secondary sidebar (right). 1 = minimum, each increment adds one step."
+                },
+                "panelWidth.panel": {
+                    "type": "number",
+                    "default": 5,
+                    "minimum": 1,
+                    "description": "Size of the panel (bottom). 1 = minimum, each increment adds one step."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "compile": "tsc -p ./tsconfig.json",
+        "watch": "tsc -watch -p ./tsconfig.json",
+        "vscode:prepublish": "npm run compile"
+    },
+    "dependencies": {
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/uuid": "^9.0.0",
+        "@types/vscode": "^1.50.0",
+        "@vscode/vsce": "^3.7.1",
+        "typescript": "^5.0.0"
+    }
+}

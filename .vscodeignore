@@ -1,0 +1,14 @@
+vscode-panel-width
+**/.vscodeignore**
+node_modules
+**/*.test.ts
+**/*.spec.ts
+**/*.map
+**/*.d.ts
+**/coverage
+**/logs
+**/tmp
+.vscode
+.DS_Store
+Thumbs.db
+src/**
