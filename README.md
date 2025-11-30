@@ -12,6 +12,7 @@ Set preferred sizes for VS Code sidebars and panel using simple step numbers.
 4. Select the `.vsix` file
 
 Or via command line:
+
 ```bash
 code --install-extension vscode-panel-width-0.2.0.vsix
 ```
@@ -45,32 +46,32 @@ Use the Command Palette (`Ctrl+Shift+P`) and search for "Panel Width" commands.
 
 ### Commands
 
-| Command | Description |
-|---------|-------------|
-| `Panel Width: Apply All Sizes` | Apply all configured sizes at once |
-| `Panel Width: Apply Primary Sidebar Size` | Apply left sidebar size |
-| `Panel Width: Apply Secondary Sidebar Size` | Apply right sidebar size |
-| `Panel Width: Apply Panel Size` | Apply bottom panel size |
-| `Panel Width: Set Primary Sidebar Size` | Set and apply left sidebar size |
-| `Panel Width: Set Secondary Sidebar Size` | Set and apply right sidebar size |
-| `Panel Width: Set Panel Size` | Set and apply bottom panel size |
+| Command                                     | Description                        |
+| ------------------------------------------- | ---------------------------------- |
+| `Panel Width: Apply All Sizes`              | Apply all configured sizes at once |
+| `Panel Width: Apply Primary Sidebar Size`   | Apply left sidebar size            |
+| `Panel Width: Apply Secondary Sidebar Size` | Apply right sidebar size           |
+| `Panel Width: Apply Panel Size`             | Apply bottom panel size            |
+| `Panel Width: Set Primary Sidebar Size`     | Set and apply left sidebar size    |
+| `Panel Width: Set Secondary Sidebar Size`   | Set and apply right sidebar size   |
+| `Panel Width: Set Panel Size`               | Set and apply bottom panel size    |
 
 ## Configuration
 
 Settings can be configured in VS Code Settings (`Ctrl+,`) under "Panel Width".
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `panelWidth.primarySidebar` | `5` | Size of left sidebar (1 = minimum) |
-| `panelWidth.secondarySidebar` | `8` | Size of right sidebar (1 = minimum) |
-| `panelWidth.panel` | `5` | Size of bottom panel (1 = minimum) |
+| Setting                       | Default | Description                         |
+| ----------------------------- | ------- | ----------------------------------- |
+| `panelWidth.primarySidebar`   | `5`     | Size of left sidebar (1 = minimum)  |
+| `panelWidth.secondarySidebar` | `8`     | Size of right sidebar (1 = minimum) |
+| `panelWidth.panel`            | `5`     | Size of bottom panel (1 = minimum)  |
 
 ### How Sizes Work
 
-- `1` = minimum size
-- `2` = minimum + 1 step
-- `3` = minimum + 2 steps
-- etc.
+-   `1` = minimum size
+-   `2` = minimum + 1 step
+-   `3` = minimum + 2 steps
+-   etc.
 
 Each step is approximately 60 pixels.
 
